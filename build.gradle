@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'space.nekochocolate'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+//    implementation 'com.github.oshi:oshi-core:5.4.1'
+    implementation 'com.github.oshi:oshi-core:+'
+    implementation 'org.slf4j:slf4j-nop:+'
+    implementation fileTree(dir: 'E:\\[Server] Meya Ex Program\\EasyLog4J\\out\\artifacts\\EasyLog4J_jar', include: ['*.jar'])
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
